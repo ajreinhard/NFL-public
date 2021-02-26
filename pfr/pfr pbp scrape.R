@@ -139,6 +139,7 @@ pre_posteam_pbp_df <- pbp_html %>%
   mutate(pos_swap = pos_swap) %>% 
   bind_cols(play_player_ids) %>% 
   bind_cols(play_player_names) %>% 
+  # these rows must be removed
   filter(!grepl('Quarter', Quarter) & !grepl('Overtime', Quarter) & !grepl('Regulation', Quarter)) %>% 
   rename(
     qtr = Quarter,
@@ -153,6 +154,7 @@ pre_posteam_pbp_df <- pbp_html %>%
     home_score_post = 8
   ) %>% 
   mutate_all(function(x) ifelse(x=='', NA ,x)) %>% 
+  mutate(time_txt = ifelse(qtr != lag(qtr, default = '1'), '15:00', time_txt)) %>% 
   fill(time_txt) %>% 
   separate(time_txt, ':', into = c('qtr_mins', 'qtr_sec'), convert = T) %>% 
   mutate(
