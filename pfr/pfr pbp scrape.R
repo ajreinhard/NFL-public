@@ -52,8 +52,48 @@ get_pfr_game_ids <- function(year){
 }
 
 
+pfr_team_abbr <- c(
+  'ARI' = 'ARI',
+  'ATL' = 'ATL',
+  'BAL' = 'BAL',
+  'BUF' = 'BUF',
+  'CAR' = 'CAR',
+  'CHI' = 'CHI',
+  'CIN' = 'CIN',
+  'CLE' = 'CLE',
+  'DAL' = 'DAL',
+  'DEN' = 'DEN',
+  'DET' = 'DET',
+  'GNB' = 'GB',
+  'IND' = 'IND',
+  'JAX' = 'JAX',
+  'KAN' = 'KC',
+  'MIA' = 'MIA',
+  'MIN' = 'MIN',
+  'NOR' = 'NO',
+  'NWE' = 'NE',
+  'NYG' = 'NYG',
+  'NYJ' = 'NYJ',
+  'OAK' = 'OAK',
+  'PHI' = 'PHI',
+  'PIT' = 'PIT',
+  'SDG' = 'SD',
+  'SEA' = 'SEA',
+  'SFO' = 'SF',
+  'STL' = 'STL',
+  'TAM' = 'TB',
+  'WAS' = 'WAS',
+  'TEN' = 'TNO',
+  'HOU' = 'HSO',
+  'RAI' = 'LRD',
+  'RAM' = 'LRM'
+)
+
+
 get_pfr_pbp <- function(game_id) {
 
+if(game_id == '199711300phi') {return(NULL)}
+  
 game_html <- read_html(paste0('https://www.pro-football-reference.com/boxscores/', game_id, '.htm'))
 
 # main pbp table
@@ -83,9 +123,14 @@ game_info <- game_html %>%
   extract2(1)
 
 roof <- game_info %>% filter(X1 == 'Roof') %>% pull(X2)
-spread <- game_info %>% filter(X1 == 'Vegas Line') %>% pull(X2) %>% gsub(away_team_full, '', .) %>% as.numeric %>% suppressWarnings
-if(is.na(spread)) {spread <- game_info %>% filter(X1 == 'Vegas Line') %>% pull(X2) %>% gsub(home_team_full, '', .) %>% as.numeric * -1 %>% suppressWarnings}
+
+# trying to suppress NA numeric warning from below
+warn = getOption('warn')
+options(warn = -1)
+spread <- game_info %>% filter(X1 == 'Vegas Line') %>% pull(X2) %>% gsub(away_team_full, '', .) %>% as.numeric
+if(is.na(spread)) {spread <- game_info %>% filter(X1 == 'Vegas Line') %>% pull(X2) %>% gsub(home_team_full, '', .) %>% as.numeric * -1}
 if(game_info %>% filter(X1 == 'Vegas Line') %>% pull(X2) == 'Pick') {spread <- 0}
+options(warn = warn)
 
 # just need to get season. could eventually get from games file
 season <- game_html %>% html_nodes(xpath = '//div[@id = "inner_nav"]//li/a') %>% html_text %>% .[2] %>% gsub(' NFL Scores & Schedule', '', .) %>% as.numeric
@@ -158,7 +203,7 @@ pre_posteam_pbp_df <- pbp_html %>%
   fill(time_txt) %>% 
   separate(time_txt, ':', into = c('qtr_mins', 'qtr_sec'), convert = T) %>% 
   mutate(
-    qtr = ifelse(qtr == 'OT', 5, qtr),
+    qtr = as.numeric(ifelse(qtr == 'OT', 5, qtr)),
     game_half = 
       case_when(
         qtr <= 2 ~ 'Half1',
@@ -180,7 +225,7 @@ pre_posteam_pbp_df <- pbp_html %>%
     down = as.numeric(down),
     ydstogo = as.numeric(ydstogo),
     pfr_ep = as.numeric(pfr_ep),
-    pfr_epa = pfr_ep - as.numeric(pfr_ep_post),
+    pfr_epa = as.numeric(pfr_ep_post) - pfr_ep,
     pfr_ep_post = NULL,
     away_score_post = as.numeric(away_score_post),
     home_score_post = as.numeric(home_score_post),
@@ -272,12 +317,13 @@ pre_posteam_pbp_df %>%
   mutate(
     # PFR switches abbr for these teams, but only for yardline
     side_of_field = case_when(
-      side_of_field == 'RAI' & season >= 1994 ~ 'OAK',
+      side_of_field == 'RAI' & season >= 1995 ~ 'OAK',
       side_of_field == 'CRD' ~ 'ARI',
       side_of_field == 'RAM' & season >= 1995 ~ 'STL',
-      side_of_field == 'OLI' & season >= 1995 ~ 'TEN',
-      side_of_field == 'OLI' ~ 'HOU',
+      side_of_field == 'OTI' & season >= 1997 ~ 'TEN',
+      side_of_field == 'OTI' ~ 'HOU',
       side_of_field == 'CLT' ~ 'IND',
+      side_of_field == 'RAV' ~ 'BAL',
       TRUE ~ side_of_field
     ),
     yardline_100 = ifelse(posteam == side_of_field, 100 - as.numeric(yardline_50), as.numeric(yardline_50)),
@@ -325,6 +371,7 @@ pre_posteam_pbp_df %>%
     epa = ifelse(points_scored == 0, epa, points_scored - ep),
     points_scored = NULL
   ) %>% 
+  ungroup %>% 
   # put all the cols in nflfastR order 
   select(play_id, game_id, drive_num, home_team, away_team, posteam, posteam_type, defteam, side_of_field, yardline_100, quarter_seconds_remaining, half_seconds_remaining,
          game_seconds_remaining, game_half, qtr, down, yrdln, ydstogo, desc, play_type, home_timeouts_remaining, away_timeouts_remaining, timeout, timeout_team,
@@ -332,7 +379,7 @@ pre_posteam_pbp_df %>%
          posteam_score_post, defteam_score_post, no_score_prob, opp_fg_prob, opp_safety_prob, opp_td_prob, fg_prob, safety_prob, td_prob, ep, epa, pfr_ep, pfr_epa, wp, vegas_wp,
          incomplete_pass, interception, pass_attempt, sack, two_point_attempt, complete_pass, passer_player_id, passer_player_name, receiver_player_id,
          receiver_player_name, rusher_player_id, rusher_player_name, player_id, player_name, season, spread_line, roof) %>%
+  mutate_at(vars(ends_with('team')), .funs = function(x) pfr_team_abbr[paste0(x)] %>% as.character) %>% 
   return
 }
-
 
