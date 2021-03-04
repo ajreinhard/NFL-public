@@ -83,7 +83,7 @@ pfr_team_abbr <- c(
   'STL' = 'STL',
   'TAM' = 'TB',
   'WAS' = 'WAS',
-  'TEN' = 'TNO',
+  'TEN' = 'TEN',
   'HOU' = 'HSO',
   'RAI' = 'LRD',
   'RAM' = 'LRM'
