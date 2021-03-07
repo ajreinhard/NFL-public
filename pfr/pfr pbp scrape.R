@@ -74,19 +74,19 @@ pfr_team_abbr <- c(
   'NWE' = 'NE',
   'NYG' = 'NYG',
   'NYJ' = 'NYJ',
-  'OAK' = 'OAK',
+  'OAK' = 'LV',
   'PHI' = 'PHI',
   'PIT' = 'PIT',
-  'SDG' = 'SD',
+  'SDG' = 'LAC',
   'SEA' = 'SEA',
   'SFO' = 'SF',
-  'STL' = 'STL',
+  'STL' = 'LA',
   'TAM' = 'TB',
   'WAS' = 'WAS',
   'TEN' = 'TEN',
   'HOU' = 'HSO',
-  'RAI' = 'LRD',
-  'RAM' = 'LRM'
+  'RAI' = 'LV',
+  'RAM' = 'LA'
 )
 
 
