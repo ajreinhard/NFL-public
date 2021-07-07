@@ -1,0 +1,222 @@
+<head>
+	<title>Rank The QBs</title>
+    <meta charset="windows-1252">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        tr {
+			cursor: pointer;
+		}
+        
+		td:nth-child(1) {
+			width: 2vw;
+		}
+		
+		.selected {
+			background-color: red;
+			color: #fff;
+			font-weight: bold;
+		}
+		
+        button {
+			margin:10px; 
+			background-color:#eee;
+			border: 2px solid #00F;
+            color: #17bb1c;
+			font-weight: bold;
+			font-size: 6vw;
+			cursor: pointer;
+		}
+			
+		img {
+			width: 1vw;
+		}
+		
+		#scrollers {
+			position: fixed;
+			float: right;
+			right: 20px;
+			top: 20px;
+		}
+		
+		#table {
+			margin: 0px;
+			padding: 0px;
+			table-layout: fixed;
+			font-size: 1.8vw;
+		}
+		
+    </style>
+</head>
+<body>
+<table id="table"></table>
+<div = id="scrollers">
+	<button onclick="upNdown('up');">&ShortUpArrow;</button>
+	<button onclick="upNdown('down');">&ShortDownArrow;</button><br>
+	<button onclick="upNdown('top');">TOP</button><br>
+	<button onclick="upNdown('bottom');">BOTTOM</button><br>
+	<button onclick="run_lambda()">Submit Entry</button>
+</div>
+</body>
+<script>
+
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+
+var players = [
+'<tr><td><img src="https://a.espncdn.com/i/teamlogos/nfl/500/NE.png"></td><td class="player">Mac Jones</td></tr>',
+'<tr><td><img src="https://a.espncdn.com/i/teamlogos/nfl/500/NE.png"></td><td class="player">Cam Newton</td></tr>',
+'<tr><td><img src="https://a.espncdn.com/i/teamlogos/nfl/500/NYJ.png"></td><td class="player">Zach Wilson</td></tr>',
+'<tr><td><img src="https://a.espncdn.com/i/teamlogos/nfl/500/MIA.png"></td><td class="player">Tua Tagovailoa</td></tr>',
+'<tr><td><img src="https://a.espncdn.com/i/teamlogos/nfl/500/BUF.png"></td><td class="player">Josh Allen</td></tr>',
+'<tr><td><img src="https://a.espncdn.com/i/teamlogos/nfl/500/CLE.png"></td><td class="player">Baker Mayfield</td></tr>',
+'<tr><td><img src="https://a.espncdn.com/i/teamlogos/nfl/500/BAL.png"></td><td class="player">Lamar Jackson</td></tr>',
+'<tr><td><img src="https://a.espncdn.com/i/teamlogos/nfl/500/PIT.png"></td><td class="player">Ben Roethlisberger</td></tr>',
+'<tr><td><img src="https://a.espncdn.com/i/teamlogos/nfl/500/CIN.png"></td><td class="player">Joe Burrow</td></tr>',
+'<tr><td><img src="https://a.espncdn.com/i/teamlogos/nfl/500/HOU.png"></td><td class="player">Deshaun Watson</td></tr>',
+'<tr><td><img src="https://a.espncdn.com/i/teamlogos/nfl/500/HOU.png"></td><td class="player">Tyrod Taylor</td></tr>',
+'<tr><td><img src="https://a.espncdn.com/i/teamlogos/nfl/500/JAX.png"></td><td class="player">Trevor Lawrence</td></tr>',
+'<tr><td><img src="https://a.espncdn.com/i/teamlogos/nfl/500/IND.png"></td><td class="player">Carson Wentz</td></tr>',
+'<tr><td><img src="https://a.espncdn.com/i/teamlogos/nfl/500/TEN.png"></td><td class="player">Ryan Tannehill</td></tr>',
+'<tr><td><img src="https://a.espncdn.com/i/teamlogos/nfl/500/KC.png"></td><td class="player">Patrick Mahomes</td></tr>',
+'<tr><td><img src="https://a.espncdn.com/i/teamlogos/nfl/500/LV.png"></td><td class="player">Derek Carr</td></tr>',
+'<tr><td><img src="https://a.espncdn.com/i/teamlogos/nfl/500/DEN.png"></td><td class="player">Drew Lock</td></tr>',
+'<tr><td><img src="https://a.espncdn.com/i/teamlogos/nfl/500/DEN.png"></td><td class="player">Teddy Brclassgewater</td></tr>',
+'<tr><td><img src="https://a.espncdn.com/i/teamlogos/nfl/500/LAC.png"></td><td class="player">Justin Herbert</td></tr>',
+'<tr><td><img src="https://a.espncdn.com/i/teamlogos/nfl/500/NYG.png"></td><td class="player">Daniel Jones</td></tr>',
+'<tr><td><img src="https://a.espncdn.com/i/teamlogos/nfl/500/PHI.png"></td><td class="player">Jalen Hurts</td></tr>',
+'<tr><td><img src="https://a.espncdn.com/i/teamlogos/nfl/500/WAS.png"></td><td class="player">Ryan Fitzpatrick</td></tr>',
+'<tr><td><img src="https://a.espncdn.com/i/teamlogos/nfl/500/DAL.png"></td><td class="player">Dak Prescott</td></tr>',
+'<tr><td><img src="https://a.espncdn.com/i/teamlogos/nfl/500/MIN.png"></td><td class="player">Kirk Cousins</td></tr>',
+'<tr><td><img src="https://a.espncdn.com/i/teamlogos/nfl/500/DET.png"></td><td class="player">Jared Goff</td></tr>',
+'<tr><td><img src="https://a.espncdn.com/i/teamlogos/nfl/500/GB.png"></td><td class="player">Aaron Rodgers</td></tr>',
+'<tr><td><img src="https://a.espncdn.com/i/teamlogos/nfl/500/GB.png"></td><td class="player">Jordan Love</td></tr>',
+'<tr><td><img src="https://a.espncdn.com/i/teamlogos/nfl/500/CHI.png"></td><td class="player">Andy Dalton</td></tr>',
+'<tr><td><img src="https://a.espncdn.com/i/teamlogos/nfl/500/CHI.png"></td><td class="player">Justin Fields</td></tr>',
+'<tr><td><img src="https://a.espncdn.com/i/teamlogos/nfl/500/CAR.png"></td><td class="player">Sam Darnold</td></tr>',
+'<tr><td><img src="https://a.espncdn.com/i/teamlogos/nfl/500/TB.png"></td><td class="player">Tom Brady</td></tr>',
+'<tr><td><img src="https://a.espncdn.com/i/teamlogos/nfl/500/NO.png"></td><td class="player">Jameis Winston</td></tr>',
+'<tr><td><img src="https://a.espncdn.com/i/teamlogos/nfl/500/NO.png"></td><td class="player">Taysom Hill</td></tr>',
+'<tr><td><img src="https://a.espncdn.com/i/teamlogos/nfl/500/ATL.png"></td><td class="player">Matt Ryan</td></tr>',
+'<tr><td><img src="https://a.espncdn.com/i/teamlogos/nfl/500/SEA.png"></td><td class="player">Russell Wilson</td></tr>',
+'<tr><td><img src="https://a.espncdn.com/i/teamlogos/nfl/500/SF.png"></td><td class="player">Jimmy Garoppolo</td></tr>',
+'<tr><td><img src="https://a.espncdn.com/i/teamlogos/nfl/500/SF.png"></td><td class="player">Trey Lance</td></tr>',
+'<tr><td><img src="https://a.espncdn.com/i/teamlogos/nfl/500/LA.png"></td><td class="player">Matthew Stafford</td></tr>',
+'<tr><td><img src="https://a.espncdn.com/i/teamlogos/nfl/500/ARI.png"></td><td class="player">Kyler Murray</td></tr>'
+]
+
+var players_tbl = '<tr><th></th><th>Players</th></tr>';
+players_tbl += shuffle(players).join('');
+	
+document.getElementById('table').innerHTML = players_tbl;
+
+var index;  // variable to set the selected row index
+function getSelectedRow()
+{
+	var table = document.getElementById("table");
+	for(var i = 1; i < table.rows.length; i++)
+	{
+		table.rows[i].onclick = function()
+		{
+			// clear the selected from the previous selected row
+			// the first time index is undefined
+			if(typeof index !== "undefined"){
+				table.rows[index].classList.toggle("selected");
+			}
+
+			index = this.rowIndex;
+			this.classList.toggle("selected");
+
+		};
+	}
+
+}
+
+
+getSelectedRow();
+
+
+function upNdown(direction)
+{
+	var rows = document.getElementById("table").rows,
+		parent = rows[index].parentNode;
+		
+	 if(direction === "up") {
+		 if(index > 1){
+			parent.insertBefore(rows[index],rows[index - 1]);
+			// when the row go up the index will be equal to index - 1
+			index--;
+		}
+	 }
+
+	 if(direction === "down") {
+		 if(index < rows.length -1){
+			parent.insertBefore(rows[index + 1],rows[index]);
+			// when the row go down the index will be equal to index + 1
+			index++;
+		}
+	 }
+	 
+	 if(direction === "bottom") { 
+		parent.insertBefore(rows[index],rows[rows.length]);
+		index = rows.length - 1;
+	 }
+	 
+	 if(direction === "top") { 
+		parent.insertBefore(rows[index],rows[1]);
+		index = 1;
+	 }
+}
+
+
+</script>
+<script src="https://sdk.amazonaws.com/js/aws-sdk-2.1.24.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+function run_lambda() {
+
+AWS.config.update({region: 'us-east-2'});
+AWS.config.credentials = new AWS.CognitoIdentityCredentials({IdentityPoolId: 'us-east-2:dec8764a-5e95-446c-bf23-0cdf0fc9a3ff'});
+
+var lambda = new AWS.Lambda({region: 'us-east-2', apiVersion: '2015-03-31'});
+
+var sending_arr = [];
+var all_inputs = document.getElementsByClassName("player");
+
+for (var j=0; j < all_inputs.length; j++) { 
+	if (all_inputs[j].innerHTML != "") {sending_arr.push(all_inputs[j].innerHTML)}
+}
+var sending = '{"players":["' + sending_arr.join('", "') + '"]}';
+
+var pullParams = {
+  FunctionName: 'SurveyRespHandler',
+  InvocationType: 'RequestResponse',
+  Payload: sending,
+  LogType : 'None'
+};
+
+var result;
+
+lambda.invoke(pullParams, function(error, data) {
+  if (error) {
+    prompt(error);
+  } else {
+	prompt('done!');
+  }
+});}
+</script>
