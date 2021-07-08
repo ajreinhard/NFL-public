@@ -545,7 +545,7 @@ season,posteam,game_id,off_play_caller
 2012,NYG,2012_01_DAL_NYG,Kevin Gilbride
 2012,IND,2012_01_IND_CHI,Bruce Arians
 2012,CHI,2012_01_IND_CHI,Mike Tice
-2012,JAX,2012_01_JAX_MIN,Bob<U+00A0>Bratkowski
+2012,JAX,2012_01_JAX_MIN,Bob Bratkowski
 2012,MIN,2012_01_JAX_MIN,Bill Musgrave
 2012,MIA,2012_01_MIA_HOU,Mike Sherman
 2012,HOU,2012_01_MIA_HOU,Gary Kubiak
@@ -580,7 +580,7 @@ season,posteam,game_id,off_play_caller
 2012,DET,2012_02_DET_SF,Scott Linehan
 2012,SF,2012_02_DET_SF,Greg Roman
 2012,HOU,2012_02_HOU_JAX,Gary Kubiak
-2012,JAX,2012_02_HOU_JAX,Bob<U+00A0>Bratkowski
+2012,JAX,2012_02_HOU_JAX,Bob Bratkowski
 2012,KC,2012_02_KC_BUF,Brian Daboll
 2012,BUF,2012_02_KC_BUF,Chan Gailey
 2012,MIN,2012_02_MIN_IND,Bill Musgrave
@@ -609,7 +609,7 @@ season,posteam,game_id,off_play_caller
 2012,SEA,2012_03_GB_SEA,Darrell Bevell
 2012,HOU,2012_03_HOU_DEN,Gary Kubiak
 2012,DEN,2012_03_HOU_DEN,Mike McCoy
-2012,JAX,2012_03_JAX_IND,Bob<U+00A0>Bratkowski
+2012,JAX,2012_03_JAX_IND,Bob Bratkowski
 2012,IND,2012_03_JAX_IND,Bruce Arians
 2012,KC,2012_03_KC_NO,Brian Daboll
 2012,NO,2012_03_KC_NO,Pete Carmichael
@@ -634,7 +634,7 @@ season,posteam,game_id,off_play_caller
 2012,CHI,2012_04_CHI_DAL,Mike Tice
 2012,DAL,2012_04_CHI_DAL,Jason Garrett
 2012,CIN,2012_04_CIN_JAX,Jay Gruden
-2012,JAX,2012_04_CIN_JAX,Bob<U+00A0>Bratkowski
+2012,JAX,2012_04_CIN_JAX,Bob Bratkowski
 2012,CLE,2012_04_CLE_BAL,Pat Shurmur
 2012,BAL,2012_04_CLE_BAL,Cam Cameron
 2012,MIA,2012_04_MIA_ARI,Mike Sherman
@@ -668,7 +668,7 @@ season,posteam,game_id,off_play_caller
 2012,BUF,2012_05_BUF_SF,Chan Gailey
 2012,SF,2012_05_BUF_SF,Greg Roman
 2012,CHI,2012_05_CHI_JAX,Mike Tice
-2012,JAX,2012_05_CHI_JAX,Bob<U+00A0>Bratkowski
+2012,JAX,2012_05_CHI_JAX,Bob Bratkowski
 2012,CLE,2012_05_CLE_NYG,Pat Shurmur
 2012,NYG,2012_05_CLE_NYG,Kevin Gilbride
 2012,DEN,2012_05_DEN_NE,Mike McCoy
@@ -727,7 +727,7 @@ season,posteam,game_id,off_play_caller
 2012,CHI,2012_07_DET_CHI,Mike Tice
 2012,GB,2012_07_GB_STL,Mike McCarthy
 2012,LA,2012_07_GB_STL,Brian Schottenheimer
-2012,JAX,2012_07_JAX_OAK,Bob<U+00A0>Bratkowski
+2012,JAX,2012_07_JAX_OAK,Bob Bratkowski
 2012,LV,2012_07_JAX_OAK,Greg Knapp
 2012,NO,2012_07_NO_TB,Pete Carmichael
 2012,TB,2012_07_NO_TB,Mike Sullivan
@@ -747,7 +747,7 @@ season,posteam,game_id,off_play_caller
 2012,CHI,2012_08_CAR_CHI,Mike Tice
 2012,IND,2012_08_IND_TEN,Bruce Arians
 2012,TEN,2012_08_IND_TEN,Chris Palmer
-2012,JAX,2012_08_JAX_GB,Bob<U+00A0>Bratkowski
+2012,JAX,2012_08_JAX_GB,Bob Bratkowski
 2012,GB,2012_08_JAX_GB,Mike McCarthy
 2012,MIA,2012_08_MIA_NYJ,Mike Sherman
 2012,NYJ,2012_08_MIA_NYJ,Tony Sparano
@@ -784,7 +784,7 @@ season,posteam,game_id,off_play_caller
 2012,DEN,2012_09_DEN_CIN,Mike McCoy
 2012,CIN,2012_09_DEN_CIN,Jay Gruden
 2012,DET,2012_09_DET_JAX,Scott Linehan
-2012,JAX,2012_09_DET_JAX,Bob<U+00A0>Bratkowski
+2012,JAX,2012_09_DET_JAX,Bob Bratkowski
 2012,KC,2012_09_KC_SD,Brian Daboll
 2012,LAC,2012_09_KC_SD,Norv Turner
 2012,MIA,2012_09_MIA_IND,Mike Sherman
@@ -810,7 +810,7 @@ season,posteam,game_id,off_play_caller
 2012,HOU,2012_10_HOU_CHI,Gary Kubiak
 2012,CHI,2012_10_HOU_CHI,Mike Tice
 2012,IND,2012_10_IND_JAX,Bruce Arians
-2012,JAX,2012_10_IND_JAX,Bob<U+00A0>Bratkowski
+2012,JAX,2012_10_IND_JAX,Bob Bratkowski
 2012,KC,2012_10_KC_PIT,Brian Daboll
 2012,PIT,2012_10_KC_PIT,Todd Haley
 2012,NYG,2012_10_NYG_CIN,Kevin Gilbride
@@ -839,7 +839,7 @@ season,posteam,game_id,off_play_caller
 2012,DET,2012_11_GB_DET,Scott Linehan
 2012,IND,2012_11_IND_NE,Bruce Arians
 2012,NE,2012_11_IND_NE,Josh McDaniels
-2012,JAX,2012_11_JAX_HOU,Bob<U+00A0>Bratkowski
+2012,JAX,2012_11_JAX_HOU,Bob Bratkowski
 2012,HOU,2012_11_JAX_HOU,Gary Kubiak
 2012,MIA,2012_11_MIA_BUF,Mike Sherman
 2012,BUF,2012_11_MIA_BUF,Chan Gailey
@@ -882,7 +882,7 @@ season,posteam,game_id,off_play_caller
 2012,LA,2012_12_STL_ARI,Brian Schottenheimer
 2012,ARI,2012_12_STL_ARI,Mike Miller
 2012,TEN,2012_12_TEN_JAX,Chris Palmer
-2012,JAX,2012_12_TEN_JAX,Bob<U+00A0>Bratkowski
+2012,JAX,2012_12_TEN_JAX,Bob Bratkowski
 2012,WAS,2012_12_WAS_DAL,Kyle Shanahan
 2012,DAL,2012_12_WAS_DAL,Jason Garrett
 2012,ARI,2012_13_ARI_NYJ,Mike Miller
@@ -897,7 +897,7 @@ season,posteam,game_id,off_play_caller
 2012,TEN,2012_13_HOU_TEN,Dowell Loggains
 2012,IND,2012_13_IND_DET,Bruce Arians
 2012,DET,2012_13_IND_DET,Scott Linehan
-2012,JAX,2012_13_JAX_BUF,Bob<U+00A0>Bratkowski
+2012,JAX,2012_13_JAX_BUF,Bob Bratkowski
 2012,BUF,2012_13_JAX_BUF,Chan Gailey
 2012,MIN,2012_13_MIN_GB,Bill Musgrave
 2012,GB,2012_13_MIN_GB,Mike McCarthy
@@ -940,7 +940,7 @@ season,posteam,game_id,off_play_caller
 2012,NO,2012_14_NO_NYG,Pete Carmichael
 2012,NYG,2012_14_NO_NYG,Kevin Gilbride
 2012,NYJ,2012_14_NYJ_JAX,Tony Sparano
-2012,JAX,2012_14_NYJ_JAX,Bob<U+00A0>Bratkowski
+2012,JAX,2012_14_NYJ_JAX,Bob Bratkowski
 2012,PHI,2012_14_PHI_TB,Mary Mornhinweg
 2012,TB,2012_14_PHI_TB,Mike Sullivan
 2012,LAC,2012_14_SD_PIT,Norv Turner
@@ -961,7 +961,7 @@ season,posteam,game_id,off_play_caller
 2012,CHI,2012_15_GB_CHI,Mike Tice
 2012,IND,2012_15_IND_HOU,Bruce Arians
 2012,HOU,2012_15_IND_HOU,Gary Kubiak
-2012,JAX,2012_15_JAX_MIA,Bob<U+00A0>Bratkowski
+2012,JAX,2012_15_JAX_MIA,Bob Bratkowski
 2012,MIA,2012_15_JAX_MIA,Mike Sherman
 2012,KC,2012_15_KC_OAK,Brian Daboll
 2012,LV,2012_15_KC_OAK,Greg Knapp
@@ -996,7 +996,7 @@ season,posteam,game_id,off_play_caller
 2012,MIN,2012_16_MIN_HOU,Bill Musgrave
 2012,HOU,2012_16_MIN_HOU,Gary Kubiak
 2012,NE,2012_16_NE_JAX,Josh McDaniels
-2012,JAX,2012_16_NE_JAX,Bob<U+00A0>Bratkowski
+2012,JAX,2012_16_NE_JAX,Bob Bratkowski
 2012,NO,2012_16_NO_DAL,Pete Carmichael
 2012,DAL,2012_16_NO_DAL,Jason Garrett
 2012,NYG,2012_16_NYG_BAL,Kevin Gilbride
@@ -1029,7 +1029,7 @@ season,posteam,game_id,off_play_caller
 2012,MIN,2012_17_GB_MIN,Bill Musgrave
 2012,HOU,2012_17_HOU_IND,Gary Kubiak
 2012,IND,2012_17_HOU_IND,Bruce Arians
-2012,JAX,2012_17_JAX_TEN,Bob<U+00A0>Bratkowski
+2012,JAX,2012_17_JAX_TEN,Bob Bratkowski
 2012,TEN,2012_17_JAX_TEN,Dowell Loggains
 2012,KC,2012_17_KC_DEN,Brian Daboll
 2012,DEN,2012_17_KC_DEN,Mike McCoy
