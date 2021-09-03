@@ -6,6 +6,11 @@ library(ggimage)
 pbp_df <- nflfastR::load_pbp(2016:2017)
 team <- 'CLE'
 
+NFL_sec <- nflfastR::teams_colors_logos$team_color2
+names(NFL_sec) <- nflfastR::teams_colors_logos$team_abbr
+NFL_pri <- nflfastR::teams_colors_logos$team_color
+names(NFL_pri) <- nflfastR::teams_colors_logos$team_abbr
+
 team_pbp <- pbp_df %>% 
   filter(grepl(team, game_id)) %>%
   mutate(gmt_temp_datetime = as.POSIXct(strptime(paste0(as.Date(game_date), ' ', time_of_day), format = '%Y-%m-%d %T', tz = 'GMT'))) %>% 
@@ -69,7 +74,7 @@ p <- team_pbp %>%
   left_join(game_count_df) %>% 
   ggplot(aes(x = actual_time, ymin = game_num - (1 - team_vegas_wp)/2, ymax = game_num - team_vegas_wp - (1 - team_vegas_wp)/2, group = game_id)) +
   geom_ribbon(fill = NFL_sec[paste0(team)]) +
-  geom_image(aes(y = ifelse(game_num == nrow(game_count_df) & game_seconds_remaining == 3600, game_num, NA)), image = 'signiture.png', x = force_tz(as.POSIXct(0, origin = '1970-01-02', tz = 'UTC'), tz = 'America/New_York'), hjust = 1, position = position_nudge(y = 0.3), asp = 16/20, size = 0.08, color = NFL_sec[paste0(team)]) +
+  geom_image(aes(y = ifelse(game_num == nrow(game_count_df) & game_seconds_remaining == 3600, game_num, NA)), image = 'art/signiture.png', x = force_tz(as.POSIXct(0, origin = '1970-01-02', tz = 'UTC'), tz = 'America/New_York'), hjust = 1, position = position_nudge(y = 0.3), asp = 16/20, size = 0.08, color = NFL_sec[paste0(team)]) +
   scale_y_reverse(expand = expansion(add = 0), limits = c(32, 0)) +
   scale_x_datetime(expand = expansion(add = 0), limits = c(force_tz(as.POSIXct(60*60*8, origin = '1970-01-01', tz = 'UTC'), tz = 'America/New_York'), force_tz(as.POSIXct(0, origin = '1970-01-02', tz = 'UTC'), tz = 'America/New_York'))) +
   theme_void()
@@ -102,9 +107,9 @@ p <- team_pbp %>%
   geom_segment(aes(x = as.POSIXct('1970-01-01 22:00:00'), xend = as.POSIXct('1970-01-01 21:55:00'), y = 15, yend = 15), color = 'grey50', size = 1.5, lineend = 'round') +
   geom_curve(aes(x = as.POSIXct('1970-01-01 21:15:00'), xend = as.POSIXct('1970-01-01 21:57:00'), y = 12, yend = 13.8), curvature = -0.4, arrow = arrow(), size = 1.2, color = 'grey30') +
   geom_text(aes(x = as.POSIXct('1970-01-01 20:00:00'), y = 12), label = '100% Win Prob', size = 8, color = 'grey30') +
-  geom_image(aes(y = ifelse(game_num == nrow(game_count_df) & game_seconds_remaining == 3600, game_num, NA)), image = 'signiture.png', x = force_tz(as.POSIXct(0, origin = '1970-01-02', tz = 'UTC'), tz = 'America/New_York'), hjust = 1, position = position_nudge(y = 0.3), asp = 16/20, size = 0.08, color = NFL_sec[paste0(team)]) +
+  geom_image(aes(y = ifelse(game_num == nrow(game_count_df) & game_seconds_remaining == 3600, game_num, NA)), image = 'art/signiture.png', x = force_tz(as.POSIXct(0, origin = '1970-01-02', tz = 'UTC'), tz = 'America/New_York'), hjust = 1, position = position_nudge(y = 0.3), asp = 16/20, size = 0.08, color = NFL_sec[paste0(team)]) +
   scale_y_reverse(expand = expansion(add = 0), limits = c(32, 0)) +
   scale_x_datetime(expand = expansion(add = 0), limits = c(force_tz(as.POSIXct(60*60*8, origin = '1970-01-01', tz = 'UTC'), tz = 'America/New_York'), force_tz(as.POSIXct(0, origin = '1970-01-02', tz = 'UTC'), tz = 'America/New_York'))) +
   theme_void()
 
-ggsave('2016-17 browns all win prob anno.png', p, dpi = 'retina', width = 16, height = 20)
+ggsave('graphs/2016-17 browns all win prob anno.png', p, dpi = 'retina', width = 16, height = 20)
