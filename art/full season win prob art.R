@@ -62,14 +62,13 @@ end_game <- team_pbp %>%
   ungroup %>% 
   select(game_id, actual_time, team_vegas_wp)
 
-
 p <- team_pbp %>% 
   bind_rows(start_day, start_game, end_game, end_day) %>% 
   left_join(game_count_df) %>% 
-  ggplot(aes(x = actual_time, ymin = game_num, ymax = game_num - team_vegas_wp, group = game_id)) +
+  ggplot(aes(x = actual_time, ymin = game_num - (1 - team_vegas_wp)/2, ymax = game_num - team_vegas_wp - (1 - team_vegas_wp)/2, group = game_id)) +
   geom_ribbon(fill = NFL_sec[paste0(team)]) +
   geom_image(aes(y = ifelse(game_num == nrow(game_count_df) & game_seconds_remaining == 3600, game_num, NA)), image = 'C:/Users/Owner/Desktop/signiture.png', x = force_tz(as.POSIXct(0, origin = '1970-01-02', tz = 'UTC'), tz = 'America/New_York'), hjust = 1, position = position_nudge(y = 0.3), asp = 16/20, size = 0.08, color = NFL_sec[paste0(team)]) +
-  scale_y_reverse(expand = expansion(add = 0), limits = c(NA, 0)) +
+  scale_y_reverse(expand = expansion(add = 0), limits = c(32, 0)) +
   scale_x_datetime(expand = expansion(add = 0), limits = c(force_tz(as.POSIXct(60*60*8, origin = '1970-01-01', tz = 'UTC'), tz = 'America/New_York'), force_tz(as.POSIXct(0, origin = '1970-01-02', tz = 'UTC'), tz = 'America/New_York'))) +
   theme_void()
 
