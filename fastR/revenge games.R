@@ -1,6 +1,6 @@
 source('https://github.com/ajreinhard/data-viz/raw/master/ggplot/plot_SB.R')
 
-my_week = 4
+my_week = 6
 
 roster_df <- load_rosters(1999:2021) %>%
   filter(!is.na(gsis_id)) %>% 
