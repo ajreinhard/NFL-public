@@ -1,6 +1,6 @@
 source('https://github.com/ajreinhard/data-viz/raw/master/ggplot/plot_SB.R')
 
-my_week = 6
+my_week = 8
 
 roster_df <- load_rosters(1999:2021) %>%
   filter(!is.na(gsis_id)) %>% 
@@ -13,6 +13,19 @@ roster_df <- load_rosters(1999:2021) %>%
     )
   )
 
+depth_df <- load_depth_charts(2001:2021) %>%
+  filter(!is.na(gsis_id)) %>% 
+  mutate(
+    team = case_when(
+      team == 'STL' ~ 'LA',
+      team == 'SD' ~ 'LAC',
+      team == 'OAK' ~ 'LV',
+      TRUE ~ team
+    )
+  ) %>% 
+  select(season, team, gsis_id) %>% 
+  distinct
+
 sched_df <- bind_rows(
   load_schedules(2021) %>% select(game_id, team = home_team, opp = away_team),
   load_schedules(2021) %>% select(game_id, team = away_team, opp = home_team)
@@ -22,7 +35,7 @@ revenge_df <- roster_df %>%
   filter(season == 2021) %>%
   select(team, gsis_id) %>% 
   left_join(sched_df, by = 'team') %>% 
-  inner_join(roster_df, by = c('opp' = 'team', 'gsis_id')) %>% 
+  inner_join(depth_df, by = c('opp' = 'team', 'gsis_id')) %>% 
   select(gsis_id, game_id, current_team = team, former_team = opp, season_former_team = season) %>%
   group_by(gsis_id, current_team, former_team, game_id) %>% 
   summarise(
@@ -45,7 +58,7 @@ full_sched_df <- load_schedules(2021) %>%
   ungroup %>% 
   mutate(game_name = paste0(team_nick_away, ' @ ', team_nick_home))
 
-on_depth_chart <- load_depth_charts() %>%
+on_depth_chart <- load_depth_charts() %>% 
   filter(season == 2021 & week == my_week) %>%
   select(current_team = team, gsis_id) %>%
   distinct
@@ -62,6 +75,7 @@ team_helms <- sched_df %>%
   left_join(full_sched_df) %>% 
   mutate(game_name = factor(game_name, unique(game_name)))
   
+
 p <- revenge_df %>% 
   inner_join(roster_df %>% filter(season == 2021)) %>%
   inner_join(on_depth_chart) %>% 
@@ -75,7 +89,7 @@ p <- revenge_df %>%
   group_by(game_id, current_team) %>% 
   mutate(player_order = row_number()) %>% 
   ungroup %>% 
-  filter(week == my_week) %>% 
+  filter(week == my_week) %>%
   arrange(game_ord) %>% 
   mutate(game_name = factor(game_name, levels(team_helms$game_name))) %>% 
   ggplot(aes(x = home_away, y = player_order)) +
