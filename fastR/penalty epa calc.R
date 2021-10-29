@@ -1,4 +1,3 @@
-setwd('C:/Users/rei1740/Desktop/Anthony/nfl')
 source('https://github.com/ajreinhard/data-viz/raw/master/ggplot/plot_SB.R')
 
 pbp_df <- load_pbp(2021)
