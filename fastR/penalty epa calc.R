@@ -12,7 +12,7 @@ pbp_df <- load_pbp(2021)
 
 play_alone_ep_df <- pbp_df %>% 
   ### remove any "plays" where no action occurred (end of half, TOs, Two-Min Warn)
-  filter(timeout == 1 & quarter_end == 0 & desc != 'Two-Minute Warning') %>% 
+  filter(timeout != 1 & quarter_end == 0 & desc != 'Two-Minute Warning') %>% 
   ### this group by keeps the lag functions "fenced in" to a only the half
   group_by(game_id, game_half) %>% 
   mutate(
@@ -80,15 +80,13 @@ pbp_df %>%
   filter(penalty == 1) %>% 
   left_join(play_alone_ep_df) %>% 
   mutate(
-    play_ep = ifelse(play_type == 'no_play', ep, play_ep),
+    play_ep = ifelse(play_type == 'no_play' | penalty_yards + yardline_100 == 100, ep, play_ep),
     non_pen_epa = play_ep - ep,
     pen_epa = epa - non_pen_epa
   ) %>% 
-  mutate(
-    benefit_team = ifelse(posteam == penalty_team, defteam, posteam)
-  ) %>% 
+  mutate(benefit_team = ifelse(posteam == penalty_team, defteam, posteam)) %>% 
   pivot_longer(c(penalty_team, benefit_team), names_to = 'pen_team_type', values_to = 'team') %>% 
-  mutate(pen_epa = ifelse(pen_team_type == 'penalty_team', -pen_epa, pen_epa)) %>% 
+  mutate(pen_epa = ifelse(team == posteam, pen_epa, -pen_epa)) %>% 
   filter(pen_team_type == 'penalty_team') %>% 
   group_by(team) %>% 
   summarise(
@@ -109,7 +107,7 @@ viz_df <- pbp_df %>%
   filter(penalty == 1 & !is.na(down) & !grepl('\\(Punt ', desc, ignore.case = T) & !grepl(' punts ', desc, ignore.case = T) & !grepl('Field Goal', desc, ignore.case = T)) %>% 
   left_join(play_alone_ep_df) %>% 
   mutate(
-    play_ep = ifelse(play_type == 'no_play', ep, play_ep),
+    play_ep = ifelse(play_type == 'no_play' | penalty_yards + yardline_100 == 100, ep, play_ep),
     non_pen_epa = play_ep - ep,
     pen_epa = epa - non_pen_epa
   ) %>% 
@@ -155,7 +153,7 @@ pbp_df %>%
   filter(penalty == 1 & !is.na(down) & !grepl('\\(Punt ', desc, ignore.case = T) & !grepl(' punts ', desc, ignore.case = T) & !grepl('Field Goal', desc, ignore.case = T)) %>% 
   left_join(play_alone_ep_df) %>% 
   mutate(
-    play_ep = ifelse(play_type == 'no_play', ep, play_ep),
+    play_ep = ifelse(play_type == 'no_play' | penalty_yards + yardline_100 == 100, ep, play_ep),
     non_pen_epa = play_ep - ep,
     pen_epa = epa - non_pen_epa
   ) %>% 
