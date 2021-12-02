@@ -1,7 +1,7 @@
 setwd('C:/Users/Owner/Documents/GitHub/NFL/NFL')
 source('https://github.com/ajreinhard/data-viz/raw/master/ggplot/plot_SB.R')
 
-yr <- 2019
+yr <- 2021
 
 ### get data and dakota model
 pbp_df <- nflfastR:::load_pbp(yr)
@@ -135,6 +135,11 @@ qb_rankings <- full_join(full_hours, full_qb, by = as.character()) %>%
   arrange(actual_datetime_hour) %>% 
   mutate(team = ifelse(gsis_id == '00-0035232', 'WAS', team)) 
 
+qb_rankings %>% 
+  group_by(actual_datetime_hour) %>% 
+  summarise(n = n()) %>% 
+  arrange(-n)
+
 subtitle_vec <- hours_detail$full_desc
 
 col_loc <- c(0.5,1.4,2.7,4.1,5.1,6.2,7.3)
@@ -149,6 +154,13 @@ col_headers <- data.frame(
 max_rank <- qb_rankings %>% filter(!is.na(rank)) %>%  pull(rank) %>% max(.)/2
 max_rank <- ceiling(max_rank)
 
+#logos <- nflfastR::teams_colors_logos %>% select(team = team_abbr, logo_url = team_logo_wikipedia)
+logos <- qb_rankings %>% 
+  filter(!is.na(team)) %>% 
+  select(team) %>%
+  distinct %>% 
+  mutate(grob = grob_img_adj(paste0('local-img/', team, '.png')))
+
 p <- qb_rankings %>% 
   mutate(
     rank_text = paste0('#',rank),
@@ -159,14 +171,16 @@ p <- qb_rankings %>%
     epa_lab = plus_lab(round(epa_per_play,2), accuracy = .01),
     dakota_lab = number(dakota, accuracy = .001),
     plays_lab = number(total_plays, accuracy = 1),
-    active = ifelse(is.na(active), 'no', active)
+    active = ifelse(is.na(active), 'no', active),
   ) %>% 
+  #left_join(logos) %>% 
   #filter(date_time_index < 20) %>%
   ggplot(aes(y = rank_row, group = gsis_id)) +
   geom_text(data = col_headers, aes(x = x, y = y, label = label), size = 9, color = 'darkblue', family = font_SB) +
   geom_rect(aes(ymin = rank_row - 0.4, ymax = rank_row + 0.4, xmin = 0.05 + rank_grp, xmax = 7.95 + rank_grp, fill = active), show.legend = F) +
   geom_text(aes(x = 0.5 + rank_grp, label = rank_text), size = 9, color = 'darkblue', family = font_SB) +
-  geom_image(aes(x = 1.4 + rank_grp, image = ESPN_logo_url(team)), size = 0.025, asp = 2.25) + 
+  #geom_grob(aes(x = 1.4 + rank_grp, y = rank_row, label = grob), vp.height = 0.05) +
+  geom_image(aes(x = 1.4 + rank_grp, image = paste0('local-img/', team, '.png')), size = 0.025, asp = 2.15) + 
   geom_text(aes(x = 2.7 + rank_grp, label = last_name), size = 9, color = 'darkblue', family = font_SB) +
   geom_text(aes(x = 4.1 + rank_grp, label = plays_lab), size = 9, color = 'darkblue', family = font_SB) +
   geom_text(aes(x = 5.1 + rank_grp, label = epa_lab), size = 9, color = 'darkblue', family = font_SB) +
@@ -194,13 +208,13 @@ p <- qb_rankings %>%
   exit_fade() +
   ease_aes('linear')
 
-anim_save(filename = 'video/2019 hourly qb rank.mp4', animation = animate_SB(p, data_home = 'Data: @nflfastR', nframes = 5000, fps = 40, height = 900, width = 1600, renderer = ffmpeg_renderer(ffmpeg='C:/Program Files/ImageMagick-7.0.7-Q16/ffmpeg.exe')))
-system('"C:/Program Files/ImageMagick-7.0.7-Q16/ffmpeg.exe" -i "video/2019 hourly qb rank.mp4" -map 0 -c:v libx264 -c:a copy -y "video/2019 hourly qb rank working.mp4"')
+anim_save(filename = 'video/2021 hourly qb rank.mp4', animation = animate_SB(p, data_home = 'Data: @nflfastR', nframes = 4000, fps = 40, height = 900, width = 1600, renderer = ffmpeg_renderer(ffmpeg='C:/Program Files/ImageMagick-7.0.7-Q16/ffmpeg.exe')))
+system('"C:/Program Files/ImageMagick-7.0.7-Q16/ffmpeg.exe" -i "video/2021 hourly qb rank.mp4" -map 0 -c:v libx264 -c:a copy -y "video/2021 hourly qb rank working.mp4"')
 
-system('"C:/Program Files/ImageMagick-7.0.7-Q16/ffmpeg.exe" -i "video/2019 hourly qb rank not working TNF.mp4" -map 0 -c:v libx264 -c:a copy -y "video/2019 hourly qb rank working TNF.mp4"')
+system('"C:/Program Files/ImageMagick-7.0.7-Q16/ffmpeg.exe" -i "video/2021 hourly qb rank not working TNF.mp4" -map 0 -c:v libx264 -c:a copy -y "video/2021 hourly qb rank working TNF.mp4"')
+
 
 ### fun facts
-
 qb_rankings %>% 
   group_by(gsis_id, last_name) %>% 
   summarise(
@@ -214,3 +228,4 @@ pbp_df %>%
   summarise(epa = mean(qb_epa, na.rm = T)) %>% 
   arrange(-epa) %>% 
   mutate(rank = row_number())
+
