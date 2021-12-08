@@ -211,7 +211,7 @@ p <- qb_rankings %>%
 anim_save(filename = 'video/2021 hourly qb rank.mp4', animation = animate_SB(p, data_home = 'Data: @nflfastR', nframes = 4000, fps = 40, height = 900, width = 1600, renderer = ffmpeg_renderer(ffmpeg='C:/Program Files/ImageMagick-7.0.7-Q16/ffmpeg.exe')))
 system('"C:/Program Files/ImageMagick-7.0.7-Q16/ffmpeg.exe" -i "video/2021 hourly qb rank.mp4" -map 0 -c:v libx264 -c:a copy -y "video/2021 hourly qb rank working.mp4"')
 
-system('"C:/Program Files/ImageMagick-7.0.7-Q16/ffmpeg.exe" -i "video/2021 hourly qb rank not working TNF.mp4" -map 0 -c:v libx264 -c:a copy -y "video/2021 hourly qb rank working TNF.mp4"')
+system('"C:/Program Files/ImageMagick-7.0.7-Q16/ffmpeg.exe" -i "video/2021 hourly qb rank not working FOX.mp4" -map 0 -c:v libx264 -c:a copy -y "video/2021 hourly qb rank working FOX.mp4"')
 
 
 ### fun facts
