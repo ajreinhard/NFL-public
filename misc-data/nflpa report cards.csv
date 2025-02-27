@@ -1,0 +1,961 @@
+season,team,category,grade
+2023,ARI,Weight Room,F-
+2024,ARI,Weight Room,C-
+2025,ARI,Weight Room,F
+2023,ARI,Treatment of Families,F
+2024,ARI,Treatment of Families,D+
+2025,ARI,Treatment of Families,D+
+2023,ARI,Training Staff,B+
+2024,ARI,Training Staff,B
+2025,ARI,Training Staff,C
+2023,ARI,Training Room,F-
+2024,ARI,Training Room,C-
+2025,ARI,Training Room,D-
+2023,ARI,Team Travel,B+
+2024,ARI,Team Travel,C+
+2025,ARI,Team Travel,B
+2023,ARI,Strength Coaches,A-
+2024,ARI,Strength Coaches,C+
+2025,ARI,Strength Coaches,C+
+2024,ARI,Ownership,F
+2025,ARI,Ownership,D-
+2024,ARI,Nutritionist / Dietician,C
+2025,ARI,Nutritionist / Dietician,B
+2023,ARI,Locker Room,F
+2024,ARI,Locker Room,F
+2025,ARI,Locker Room,F-
+2024,ARI,Head Coach,A-
+2025,ARI,Head Coach,A
+2023,ARI,Food Service/Nutrition,F-
+2024,ARI,Food / Dining Area,D
+2025,ARI,Food / Dining Area,D-
+2023,ATL,Weight Room,C-
+2024,ATL,Weight Room,F
+2025,ATL,Weight Room,A+
+2023,ATL,Treatment of Families,B
+2024,ATL,Treatment of Families,C
+2025,ATL,Treatment of Families,A
+2023,ATL,Training Staff,A
+2024,ATL,Training Staff,A-
+2025,ATL,Training Staff,A-
+2023,ATL,Training Room,B-
+2024,ATL,Training Room,B-
+2025,ATL,Training Room,B
+2023,ATL,Team Travel,A-
+2024,ATL,Team Travel,C
+2025,ATL,Team Travel,B+
+2023,ATL,Strength Coaches,D-
+2024,ATL,Strength Coaches,F-
+2025,ATL,Strength Coaches,A
+2024,ATL,Ownership,A-
+2025,ATL,Ownership,A+
+2024,ATL,Nutritionist / Dietician,A-
+2025,ATL,Nutritionist / Dietician,A
+2023,ATL,Locker Room,D
+2024,ATL,Locker Room,F
+2025,ATL,Locker Room,A+
+2024,ATL,Head Coach,C+
+2025,ATL,Head Coach,A+
+2023,ATL,Food Service/Nutrition,C-
+2024,ATL,Food / Dining Area,C
+2025,ATL,Food / Dining Area,A
+2023,BAL,Weight Room,C+
+2024,BAL,Weight Room,B-
+2025,BAL,Weight Room,B+
+2023,BAL,Treatment of Families,C+
+2024,BAL,Treatment of Families,B-
+2025,BAL,Treatment of Families,C+
+2023,BAL,Training Staff,B+
+2024,BAL,Training Staff,B-
+2025,BAL,Training Staff,B-
+2023,BAL,Training Room,C
+2024,BAL,Training Room,C+
+2025,BAL,Training Room,B-
+2023,BAL,Team Travel,A
+2024,BAL,Team Travel,C-
+2025,BAL,Team Travel,A-
+2023,BAL,Strength Coaches,F-
+2024,BAL,Strength Coaches,B
+2025,BAL,Strength Coaches,B+
+2024,BAL,Ownership,A
+2025,BAL,Ownership,A
+2024,BAL,Nutritionist / Dietician,B-
+2025,BAL,Nutritionist / Dietician,B
+2023,BAL,Locker Room,A
+2024,BAL,Locker Room,B-
+2025,BAL,Locker Room,B-
+2024,BAL,Head Coach,B+
+2025,BAL,Head Coach,B
+2023,BAL,Food Service/Nutrition,B-
+2024,BAL,Food / Dining Area,C+
+2025,BAL,Food / Dining Area,B
+2023,BUF,Weight Room,A+
+2024,BUF,Weight Room,A+
+2025,BUF,Weight Room,A
+2023,BUF,Treatment of Families,A-
+2024,BUF,Treatment of Families,B
+2025,BUF,Treatment of Families,B+
+2023,BUF,Training Staff,A
+2024,BUF,Training Staff,B
+2025,BUF,Training Staff,C
+2023,BUF,Training Room,B+
+2024,BUF,Training Room,B+
+2025,BUF,Training Room,B-
+2023,BUF,Team Travel,D+
+2024,BUF,Team Travel,D
+2025,BUF,Team Travel,F-
+2023,BUF,Strength Coaches,A+
+2024,BUF,Strength Coaches,A
+2025,BUF,Strength Coaches,B+
+2024,BUF,Ownership,A-
+2025,BUF,Ownership,B
+2024,BUF,Nutritionist / Dietician,D+
+2025,BUF,Nutritionist / Dietician,B-
+2023,BUF,Locker Room,A-
+2024,BUF,Locker Room,B+
+2025,BUF,Locker Room,B
+2024,BUF,Head Coach,A
+2025,BUF,Head Coach,B
+2023,BUF,Food Service/Nutrition,C
+2024,BUF,Food / Dining Area,C
+2025,BUF,Food / Dining Area,B-
+2023,CAR,Weight Room,B
+2024,CAR,Weight Room,B
+2025,CAR,Weight Room,C+
+2023,CAR,Treatment of Families,A
+2024,CAR,Treatment of Families,B
+2025,CAR,Treatment of Families,B+
+2023,CAR,Training Staff,A+
+2024,CAR,Training Staff,A-
+2025,CAR,Training Staff,B+
+2023,CAR,Training Room,B-
+2024,CAR,Training Room,C+
+2025,CAR,Training Room,B-
+2023,CAR,Team Travel,B+
+2024,CAR,Team Travel,B-
+2025,CAR,Team Travel,D
+2023,CAR,Strength Coaches,A
+2024,CAR,Strength Coaches,A
+2025,CAR,Strength Coaches,A
+2024,CAR,Ownership,D
+2025,CAR,Ownership,D-
+2024,CAR,Nutritionist / Dietician,B+
+2025,CAR,Nutritionist / Dietician,A-
+2023,CAR,Locker Room,B+
+2024,CAR,Locker Room,C+
+2025,CAR,Locker Room,C
+2024,CAR,Head Coach,A-
+2025,CAR,Head Coach,A-
+2023,CAR,Food Service/Nutrition,D
+2024,CAR,Food / Dining Area,B
+2025,CAR,Food / Dining Area,B
+2023,CHI,Weight Room,A
+2024,CHI,Weight Room,A
+2025,CHI,Weight Room,A
+2023,CHI,Treatment of Families,C-
+2024,CHI,Treatment of Families,C+
+2025,CHI,Treatment of Families,C+
+2023,CHI,Training Staff,A-
+2024,CHI,Training Staff,B
+2025,CHI,Training Staff,B
+2023,CHI,Training Room,A+
+2024,CHI,Training Room,B+
+2025,CHI,Training Room,B+
+2023,CHI,Team Travel,C-
+2024,CHI,Team Travel,B
+2025,CHI,Team Travel,B
+2023,CHI,Strength Coaches,A-
+2024,CHI,Strength Coaches,B
+2025,CHI,Strength Coaches,B+
+2024,CHI,Ownership,B+
+2025,CHI,Ownership,A-
+2024,CHI,Nutritionist / Dietician,C+
+2025,CHI,Nutritionist / Dietician,B
+2023,CHI,Locker Room,A
+2024,CHI,Locker Room,A-
+2025,CHI,Locker Room,A-
+2024,CHI,Head Coach,B
+2025,CHI,Head Coach,C
+2023,CHI,Food Service/Nutrition,D+
+2024,CHI,Food / Dining Area,C
+2025,CHI,Food / Dining Area,C+
+2023,CIN,Weight Room,B+
+2024,CIN,Weight Room,B+
+2025,CIN,Weight Room,B
+2023,CIN,Treatment of Families,F
+2024,CIN,Treatment of Families,F-
+2025,CIN,Treatment of Families,F-
+2023,CIN,Training Staff,A
+2024,CIN,Training Staff,B+
+2025,CIN,Training Staff,A-
+2023,CIN,Training Room,D-
+2024,CIN,Training Room,B+
+2025,CIN,Training Room,B+
+2023,CIN,Team Travel,C+
+2024,CIN,Team Travel,C
+2025,CIN,Team Travel,A-
+2023,CIN,Strength Coaches,A
+2024,CIN,Strength Coaches,A-
+2025,CIN,Strength Coaches,A-
+2024,CIN,Ownership,C+
+2025,CIN,Ownership,C
+2024,CIN,Nutritionist / Dietician,F-
+2025,CIN,Nutritionist / Dietician,C
+2023,CIN,Locker Room,D
+2024,CIN,Locker Room,D+
+2025,CIN,Locker Room,A+
+2024,CIN,Head Coach,A
+2025,CIN,Head Coach,A
+2023,CIN,Food Service/Nutrition,F-
+2024,CIN,Food / Dining Area,F-
+2025,CIN,Food / Dining Area,F
+2023,CLE,Weight Room,D+
+2024,CLE,Weight Room,D
+2025,CLE,Weight Room,A
+2023,CLE,Treatment of Families,C
+2024,CLE,Treatment of Families,D-
+2025,CLE,Treatment of Families,D+
+2023,CLE,Training Staff,A
+2024,CLE,Training Staff,B-
+2025,CLE,Training Staff,C-
+2023,CLE,Training Room,B+
+2024,CLE,Training Room,C+
+2025,CLE,Training Room,D+
+2023,CLE,Team Travel,C
+2024,CLE,Team Travel,D
+2025,CLE,Team Travel,D
+2023,CLE,Strength Coaches,A+
+2024,CLE,Strength Coaches,B+
+2025,CLE,Strength Coaches,B+
+2024,CLE,Ownership,B
+2025,CLE,Ownership,C+
+2024,CLE,Nutritionist / Dietician,C+
+2025,CLE,Nutritionist / Dietician,B-
+2023,CLE,Locker Room,D+
+2024,CLE,Locker Room,D+
+2025,CLE,Locker Room,F-
+2024,CLE,Head Coach,B-
+2025,CLE,Head Coach,C
+2023,CLE,Food Service/Nutrition,D+
+2024,CLE,Food / Dining Area,C+
+2025,CLE,Food / Dining Area,C-
+2023,DAL,Weight Room,A+
+2024,DAL,Weight Room,A
+2025,DAL,Weight Room,A-
+2023,DAL,Treatment of Families,A+
+2024,DAL,Treatment of Families,A-
+2025,DAL,Treatment of Families,A
+2023,DAL,Training Staff,A-
+2024,DAL,Training Staff,D+
+2025,DAL,Training Staff,C
+2023,DAL,Training Room,B
+2024,DAL,Training Room,C-
+2025,DAL,Training Room,C
+2023,DAL,Team Travel,C-
+2024,DAL,Team Travel,C-
+2025,DAL,Team Travel,B-
+2023,DAL,Strength Coaches,A+
+2024,DAL,Strength Coaches,B+
+2025,DAL,Strength Coaches,B+
+2024,DAL,Ownership,B
+2025,DAL,Ownership,B
+2024,DAL,Nutritionist / Dietician,B
+2025,DAL,Nutritionist / Dietician,B+
+2023,DAL,Locker Room,A+
+2024,DAL,Locker Room,A
+2025,DAL,Locker Room,A
+2024,DAL,Head Coach,A
+2025,DAL,Head Coach,A
+2023,DAL,Food Service/Nutrition,A
+2024,DAL,Food / Dining Area,B
+2025,DAL,Food / Dining Area,B+
+2023,DEN,Weight Room,B+
+2024,DEN,Weight Room,B
+2025,DEN,Weight Room,B
+2023,DEN,Treatment of Families,D+
+2024,DEN,Treatment of Families,D+
+2025,DEN,Treatment of Families,C-
+2023,DEN,Training Staff,B
+2024,DEN,Training Staff,B
+2025,DEN,Training Staff,B+
+2023,DEN,Training Room,C+
+2024,DEN,Training Room,B-
+2025,DEN,Training Room,B
+2023,DEN,Team Travel,B+
+2024,DEN,Team Travel,B-
+2025,DEN,Team Travel,A
+2023,DEN,Strength Coaches,A-
+2024,DEN,Strength Coaches,C
+2025,DEN,Strength Coaches,B-
+2024,DEN,Ownership,A
+2025,DEN,Ownership,A
+2024,DEN,Nutritionist / Dietician,B+
+2025,DEN,Nutritionist / Dietician,A-
+2023,DEN,Locker Room,D+
+2024,DEN,Locker Room,D
+2025,DEN,Locker Room,F
+2024,DEN,Head Coach,A-
+2025,DEN,Head Coach,B
+2023,DEN,Food Service/Nutrition,D
+2024,DEN,Food / Dining Area,B
+2025,DEN,Food / Dining Area,B+
+2023,DET,Weight Room,B+
+2024,DET,Weight Room,B+
+2025,DET,Weight Room,B
+2023,DET,Treatment of Families,B
+2024,DET,Treatment of Families,B
+2025,DET,Treatment of Families,B
+2023,DET,Training Staff,B+
+2024,DET,Training Staff,B
+2025,DET,Training Staff,B
+2023,DET,Training Room,D+
+2024,DET,Training Room,B
+2025,DET,Training Room,B+
+2023,DET,Team Travel,A
+2024,DET,Team Travel,B
+2025,DET,Team Travel,B+
+2023,DET,Strength Coaches,A-
+2024,DET,Strength Coaches,A-
+2025,DET,Strength Coaches,A-
+2024,DET,Ownership,B-
+2025,DET,Ownership,B+
+2024,DET,Nutritionist / Dietician,C+
+2025,DET,Nutritionist / Dietician,B
+2023,DET,Locker Room,B
+2024,DET,Locker Room,B-
+2025,DET,Locker Room,C+
+2024,DET,Head Coach,A+
+2025,DET,Head Coach,A+
+2023,DET,Food Service/Nutrition,D-
+2024,DET,Food / Dining Area,C
+2025,DET,Food / Dining Area,B-
+2023,GB,Weight Room,A
+2024,GB,Weight Room,A
+2025,GB,Weight Room,A
+2023,GB,Treatment of Families,B+
+2024,GB,Treatment of Families,C+
+2025,GB,Treatment of Families,B
+2023,GB,Training Staff,A-
+2024,GB,Training Staff,B
+2025,GB,Training Staff,B
+2023,GB,Training Room,B-
+2024,GB,Training Room,B
+2025,GB,Training Room,A-
+2023,GB,Team Travel,A
+2024,GB,Team Travel,B+
+2025,GB,Team Travel,A-
+2023,GB,Strength Coaches,A
+2024,GB,Strength Coaches,A-
+2025,GB,Strength Coaches,B
+2024,GB,Ownership,A
+2025,GB,Ownership,A-
+2024,GB,Nutritionist / Dietician,B
+2025,GB,Nutritionist / Dietician,A-
+2023,GB,Locker Room,B
+2024,GB,Locker Room,B-
+2025,GB,Locker Room,B
+2024,GB,Head Coach,B+
+2025,GB,Head Coach,A-
+2023,GB,Food Service/Nutrition,A
+2024,GB,Food / Dining Area,B+
+2025,GB,Food / Dining Area,A-
+2023,HOU,Weight Room,A
+2024,HOU,Weight Room,B
+2025,HOU,Weight Room,B+
+2023,HOU,Treatment of Families,B+
+2024,HOU,Treatment of Families,B+
+2025,HOU,Treatment of Families,B-
+2023,HOU,Training Staff,A+
+2024,HOU,Training Staff,B+
+2025,HOU,Training Staff,B+
+2023,HOU,Training Room,B
+2024,HOU,Training Room,B+
+2025,HOU,Training Room,B+
+2023,HOU,Team Travel,A+
+2024,HOU,Team Travel,B-
+2025,HOU,Team Travel,B
+2023,HOU,Strength Coaches,A
+2024,HOU,Strength Coaches,B
+2025,HOU,Strength Coaches,B+
+2024,HOU,Ownership,B+
+2025,HOU,Ownership,A
+2024,HOU,Nutritionist / Dietician,A-
+2025,HOU,Nutritionist / Dietician,A
+2023,HOU,Locker Room,B+
+2024,HOU,Locker Room,B
+2025,HOU,Locker Room,B
+2024,HOU,Head Coach,A-
+2025,HOU,Head Coach,A
+2023,HOU,Food Service/Nutrition,B+
+2024,HOU,Food / Dining Area,A-
+2025,HOU,Food / Dining Area,A
+2023,IND,Weight Room,B
+2024,IND,Weight Room,C
+2025,IND,Weight Room,B-
+2023,IND,Treatment of Families,B+
+2024,IND,Treatment of Families,D
+2025,IND,Treatment of Families,B-
+2023,IND,Training Staff,A+
+2024,IND,Training Staff,B-
+2025,IND,Training Staff,B
+2023,IND,Training Room,B
+2024,IND,Training Room,B-
+2025,IND,Training Room,B
+2023,IND,Team Travel,F
+2024,IND,Team Travel,D
+2025,IND,Team Travel,D+
+2023,IND,Strength Coaches,A-
+2024,IND,Strength Coaches,C
+2025,IND,Strength Coaches,A-
+2024,IND,Ownership,C
+2025,IND,Ownership,B
+2024,IND,Nutritionist / Dietician,B-
+2025,IND,Nutritionist / Dietician,B+
+2023,IND,Locker Room,B+
+2024,IND,Locker Room,B
+2025,IND,Locker Room,B
+2024,IND,Head Coach,A-
+2025,IND,Head Coach,A
+2023,IND,Food Service/Nutrition,D
+2024,IND,Food / Dining Area,C
+2025,IND,Food / Dining Area,C
+2023,JAX,Weight Room,D+
+2024,JAX,Weight Room,A
+2025,JAX,Weight Room,A
+2023,JAX,Treatment of Families,F
+2024,JAX,Treatment of Families,D-
+2025,JAX,Treatment of Families,F
+2023,JAX,Training Staff,A
+2024,JAX,Training Staff,B+
+2025,JAX,Training Staff,B-
+2023,JAX,Training Room,D-
+2024,JAX,Training Room,A-
+2025,JAX,Training Room,B+
+2023,JAX,Team Travel,B
+2024,JAX,Team Travel,B
+2025,JAX,Team Travel,B+
+2023,JAX,Strength Coaches,A-
+2024,JAX,Strength Coaches,B+
+2025,JAX,Strength Coaches,B
+2024,JAX,Ownership,A
+2025,JAX,Ownership,B+
+2024,JAX,Nutritionist / Dietician,B
+2025,JAX,Nutritionist / Dietician,B
+2023,JAX,Locker Room,D-
+2024,JAX,Locker Room,A-
+2025,JAX,Locker Room,B+
+2024,JAX,Head Coach,A-
+2025,JAX,Head Coach,C
+2023,JAX,Food Service/Nutrition,D
+2024,JAX,Food / Dining Area,B-
+2025,JAX,Food / Dining Area,C+
+2023,KC,Weight Room,C+
+2024,KC,Weight Room,C+
+2025,KC,Weight Room,C+
+2023,KC,Treatment of Families,B
+2024,KC,Treatment of Families,D+
+2025,KC,Treatment of Families,B-
+2023,KC,Training Staff,D-
+2024,KC,Training Staff,F
+2025,KC,Training Staff,C
+2023,KC,Training Room,D+
+2024,KC,Training Room,D
+2025,KC,Training Room,C-
+2023,KC,Team Travel,F
+2024,KC,Team Travel,D
+2025,KC,Team Travel,B
+2023,KC,Strength Coaches,A-
+2024,KC,Strength Coaches,C+
+2025,KC,Strength Coaches,B
+2024,KC,Ownership,F-
+2025,KC,Ownership,C-
+2024,KC,Nutritionist / Dietician,F
+2025,KC,Nutritionist / Dietician,A-
+2023,KC,Locker Room,D-
+2024,KC,Locker Room,F
+2025,KC,Locker Room,D-
+2024,KC,Head Coach,A+
+2025,KC,Head Coach,A+
+2023,KC,Food Service/Nutrition,D+
+2024,KC,Food / Dining Area,C-
+2025,KC,Food / Dining Area,B
+2023,LA,Weight Room,C
+2024,LA,Weight Room,C-
+2025,LA,Weight Room,C+
+2023,LA,Treatment of Families,D+
+2024,LA,Treatment of Families,D
+2025,LA,Treatment of Families,D
+2023,LA,Training Staff,A+
+2024,LA,Training Staff,B
+2025,LA,Training Staff,B
+2023,LA,Training Room,D+
+2024,LA,Training Room,C-
+2025,LA,Training Room,B
+2023,LA,Team Travel,B-
+2024,LA,Team Travel,B-
+2025,LA,Team Travel,B
+2023,LA,Strength Coaches,A+
+2024,LA,Strength Coaches,A-
+2025,LA,Strength Coaches,A-
+2024,LA,Ownership,C+
+2025,LA,Ownership,C
+2024,LA,Nutritionist / Dietician,C+
+2025,LA,Nutritionist / Dietician,B+
+2023,LA,Locker Room,D
+2024,LA,Locker Room,D+
+2025,LA,Locker Room,C+
+2024,LA,Head Coach,A
+2025,LA,Head Coach,A
+2023,LA,Food Service/Nutrition,D
+2024,LA,Food / Dining Area,D
+2025,LA,Food / Dining Area,C-
+2023,LAC,Weight Room,C-
+2024,LAC,Weight Room,D+
+2025,LAC,Weight Room,A+
+2023,LAC,Treatment of Families,D-
+2024,LAC,Treatment of Families,F
+2025,LAC,Treatment of Families,C
+2023,LAC,Training Staff,C-
+2024,LAC,Training Staff,C+
+2025,LAC,Training Staff,A-
+2023,LAC,Training Room,F-
+2024,LAC,Training Room,D+
+2025,LAC,Training Room,A-
+2023,LAC,Team Travel,B
+2024,LAC,Team Travel,D-
+2025,LAC,Team Travel,C+
+2023,LAC,Strength Coaches,A-
+2024,LAC,Strength Coaches,C+
+2025,LAC,Strength Coaches,A
+2024,LAC,Ownership,C+
+2025,LAC,Ownership,A
+2024,LAC,Nutritionist / Dietician,B
+2025,LAC,Nutritionist / Dietician,B+
+2023,LAC,Locker Room,D-
+2024,LAC,Locker Room,F
+2025,LAC,Locker Room,A
+2024,LAC,Head Coach,B
+2025,LAC,Head Coach,B+
+2023,LAC,Food Service/Nutrition,F
+2024,LAC,Food / Dining Area,F
+2025,LAC,Food / Dining Area,A-
+2023,LV,Weight Room,A+
+2024,LV,Weight Room,A+
+2025,LV,Weight Room,A+
+2023,LV,Treatment of Families,B
+2024,LV,Treatment of Families,C+
+2025,LV,Treatment of Families,B+
+2023,LV,Training Staff,B+
+2024,LV,Training Staff,B
+2025,LV,Training Staff,A-
+2023,LV,Training Room,A
+2024,LV,Training Room,B+
+2025,LV,Training Room,A
+2023,LV,Team Travel,A+
+2024,LV,Team Travel,C
+2025,LV,Team Travel,A
+2023,LV,Strength Coaches,A+
+2024,LV,Strength Coaches,A-
+2025,LV,Strength Coaches,A
+2024,LV,Ownership,B+
+2025,LV,Ownership,A
+2024,LV,Nutritionist / Dietician,A-
+2025,LV,Nutritionist / Dietician,A+
+2023,LV,Locker Room,A+
+2024,LV,Locker Room,A-
+2025,LV,Locker Room,A-
+2024,LV,Head Coach,D
+2025,LV,Head Coach,A-
+2023,LV,Food Service/Nutrition,A-
+2024,LV,Food / Dining Area,B+
+2025,LV,Food / Dining Area,A
+2023,MIA,Weight Room,A+
+2024,MIA,Weight Room,A+
+2025,MIA,Weight Room,A+
+2023,MIA,Treatment of Families,C+
+2024,MIA,Treatment of Families,A-
+2025,MIA,Treatment of Families,A
+2023,MIA,Training Staff,A+
+2024,MIA,Training Staff,A-
+2025,MIA,Training Staff,A
+2023,MIA,Training Room,A+
+2024,MIA,Training Room,A
+2025,MIA,Training Room,A
+2023,MIA,Team Travel,A
+2024,MIA,Team Travel,A
+2025,MIA,Team Travel,A+
+2023,MIA,Strength Coaches,A+
+2024,MIA,Strength Coaches,A
+2025,MIA,Strength Coaches,A+
+2024,MIA,Ownership,A+
+2025,MIA,Ownership,A+
+2024,MIA,Nutritionist / Dietician,A
+2025,MIA,Nutritionist / Dietician,A+
+2023,MIA,Locker Room,A+
+2024,MIA,Locker Room,A
+2025,MIA,Locker Room,A+
+2024,MIA,Head Coach,A
+2025,MIA,Head Coach,A+
+2023,MIA,Food Service/Nutrition,A
+2024,MIA,Food / Dining Area,A
+2025,MIA,Food / Dining Area,A+
+2023,MIN,Weight Room,A
+2024,MIN,Weight Room,A
+2025,MIN,Weight Room,A-
+2023,MIN,Treatment of Families,A
+2024,MIN,Treatment of Families,A
+2025,MIN,Treatment of Families,A+
+2023,MIN,Training Staff,A+
+2024,MIN,Training Staff,B
+2025,MIN,Training Staff,A
+2023,MIN,Training Room,A+
+2024,MIN,Training Room,A-
+2025,MIN,Training Room,A-
+2023,MIN,Team Travel,A
+2024,MIN,Team Travel,A-
+2025,MIN,Team Travel,A
+2023,MIN,Strength Coaches,A+
+2024,MIN,Strength Coaches,A
+2025,MIN,Strength Coaches,A
+2024,MIN,Ownership,A+
+2025,MIN,Ownership,A+
+2024,MIN,Nutritionist / Dietician,A
+2025,MIN,Nutritionist / Dietician,B+
+2023,MIN,Locker Room,A+
+2024,MIN,Locker Room,A
+2025,MIN,Locker Room,A+
+2024,MIN,Head Coach,A+
+2025,MIN,Head Coach,A+
+2023,MIN,Food Service/Nutrition,A-
+2024,MIN,Food / Dining Area,B+
+2025,MIN,Food / Dining Area,A-
+2023,NE,Weight Room,D
+2024,NE,Weight Room,F
+2025,NE,Weight Room,F
+2023,NE,Treatment of Families,C-
+2024,NE,Treatment of Families,F-
+2025,NE,Treatment of Families,C+
+2023,NE,Training Staff,A
+2024,NE,Training Staff,B-
+2025,NE,Training Staff,C+
+2023,NE,Training Room,C-
+2024,NE,Training Room,C
+2025,NE,Training Room,C-
+2023,NE,Team Travel,D+
+2024,NE,Team Travel,D
+2025,NE,Team Travel,F
+2023,NE,Strength Coaches,B+
+2024,NE,Strength Coaches,C-
+2025,NE,Strength Coaches,B
+2024,NE,Ownership,D+
+2025,NE,Ownership,D
+2024,NE,Nutritionist / Dietician,B-
+2025,NE,Nutritionist / Dietician,B
+2023,NE,Locker Room,C+
+2024,NE,Locker Room,C-
+2025,NE,Locker Room,C-
+2024,NE,Head Coach,B-
+2025,NE,Head Coach,B+
+2023,NE,Food Service/Nutrition,B
+2024,NE,Food / Dining Area,B-
+2025,NE,Food / Dining Area,C
+2023,NO,Weight Room,A-
+2024,NO,Weight Room,B
+2025,NO,Weight Room,B+
+2023,NO,Treatment of Families,B+
+2024,NO,Treatment of Families,D+
+2025,NO,Treatment of Families,C
+2023,NO,Training Staff,A-
+2024,NO,Training Staff,B
+2025,NO,Training Staff,B+
+2023,NO,Training Room,B
+2024,NO,Training Room,B+
+2025,NO,Training Room,B+
+2023,NO,Team Travel,A+
+2024,NO,Team Travel,B
+2025,NO,Team Travel,A
+2023,NO,Strength Coaches,A
+2024,NO,Strength Coaches,A-
+2025,NO,Strength Coaches,A
+2024,NO,Ownership,B+
+2025,NO,Ownership,A
+2024,NO,Nutritionist / Dietician,B-
+2025,NO,Nutritionist / Dietician,B+
+2023,NO,Locker Room,A
+2024,NO,Locker Room,B
+2025,NO,Locker Room,A-
+2024,NO,Head Coach,B-
+2025,NO,Head Coach,B-
+2023,NO,Food Service/Nutrition,F-
+2024,NO,Food / Dining Area,F
+2025,NO,Food / Dining Area,D-
+2023,NYG,Weight Room,B+
+2024,NYG,Weight Room,B
+2025,NYG,Weight Room,B-
+2023,NYG,Treatment of Families,B+
+2024,NYG,Treatment of Families,C
+2025,NYG,Treatment of Families,C
+2023,NYG,Training Staff,A+
+2024,NYG,Training Staff,A-
+2025,NYG,Training Staff,B
+2023,NYG,Training Room,B+
+2024,NYG,Training Room,B
+2025,NYG,Training Room,B-
+2023,NYG,Team Travel,A-
+2024,NYG,Team Travel,B+
+2025,NYG,Team Travel,B
+2023,NYG,Strength Coaches,B+
+2024,NYG,Strength Coaches,B+
+2025,NYG,Strength Coaches,A-
+2024,NYG,Ownership,B+
+2025,NYG,Ownership,C+
+2024,NYG,Nutritionist / Dietician,C+
+2025,NYG,Nutritionist / Dietician,C+
+2023,NYG,Locker Room,B
+2024,NYG,Locker Room,C+
+2025,NYG,Locker Room,C-
+2024,NYG,Head Coach,A-
+2025,NYG,Head Coach,B+
+2023,NYG,Food Service/Nutrition,B+
+2024,NYG,Food / Dining Area,B
+2025,NYG,Food / Dining Area,B
+2023,NYJ,Weight Room,B-
+2024,NYJ,Weight Room,B-
+2025,NYJ,Weight Room,C+
+2023,NYJ,Treatment of Families,C+
+2024,NYJ,Treatment of Families,D-
+2025,NYJ,Treatment of Families,C-
+2023,NYJ,Training Staff,B
+2024,NYJ,Training Staff,C
+2025,NYJ,Training Staff,C
+2023,NYJ,Training Room,C+
+2024,NYJ,Training Room,C-
+2025,NYJ,Training Room,C
+2023,NYJ,Team Travel,B-
+2024,NYJ,Team Travel,C
+2025,NYJ,Team Travel,C+
+2023,NYJ,Strength Coaches,B
+2024,NYJ,Strength Coaches,B-
+2025,NYJ,Strength Coaches,B
+2024,NYJ,Ownership,B-
+2025,NYJ,Ownership,F
+2024,NYJ,Nutritionist / Dietician,B+
+2025,NYJ,Nutritionist / Dietician,B+
+2023,NYJ,Locker Room,B-
+2024,NYJ,Locker Room,C-
+2025,NYJ,Locker Room,D+
+2024,NYJ,Head Coach,B
+2025,NYJ,Head Coach,B
+2023,NYJ,Food Service/Nutrition,C-
+2024,NYJ,Food / Dining Area,C-
+2025,NYJ,Food / Dining Area,C-
+2023,PHI,Weight Room,A-
+2024,PHI,Weight Room,A-
+2025,PHI,Weight Room,B
+2023,PHI,Treatment of Families,B-
+2024,PHI,Treatment of Families,C
+2025,PHI,Treatment of Families,C-
+2023,PHI,Training Staff,A+
+2024,PHI,Training Staff,A-
+2025,PHI,Training Staff,B+
+2023,PHI,Training Room,C-
+2024,PHI,Training Room,B+
+2025,PHI,Training Room,B-
+2023,PHI,Team Travel,D
+2024,PHI,Team Travel,C
+2025,PHI,Team Travel,F
+2023,PHI,Strength Coaches,A+
+2024,PHI,Strength Coaches,A-
+2025,PHI,Strength Coaches,B
+2024,PHI,Ownership,A
+2025,PHI,Ownership,B
+2024,PHI,Nutritionist / Dietician,B
+2025,PHI,Nutritionist / Dietician,B-
+2023,PHI,Locker Room,C+
+2024,PHI,Locker Room,B-
+2025,PHI,Locker Room,D+
+2024,PHI,Head Coach,A
+2025,PHI,Head Coach,A-
+2023,PHI,Food Service/Nutrition,A
+2024,PHI,Food / Dining Area,A
+2025,PHI,Food / Dining Area,A-
+2023,PIT,Weight Room,C
+2024,PIT,Weight Room,C
+2025,PIT,Weight Room,C+
+2023,PIT,Treatment of Families,D-
+2024,PIT,Treatment of Families,F-
+2025,PIT,Treatment of Families,C-
+2023,PIT,Training Staff,B+
+2024,PIT,Training Staff,C
+2025,PIT,Training Staff,B
+2023,PIT,Training Room,D-
+2024,PIT,Training Room,D+
+2025,PIT,Training Room,C+
+2023,PIT,Team Travel,B
+2024,PIT,Team Travel,D
+2025,PIT,Team Travel,B+
+2023,PIT,Strength Coaches,A-
+2024,PIT,Strength Coaches,B+
+2025,PIT,Strength Coaches,C-
+2024,PIT,Ownership,F
+2025,PIT,Ownership,D
+2024,PIT,Nutritionist / Dietician,D
+2025,PIT,Nutritionist / Dietician,C+
+2023,PIT,Locker Room,D+
+2024,PIT,Locker Room,F
+2025,PIT,Locker Room,D
+2024,PIT,Head Coach,A
+2025,PIT,Head Coach,A
+2023,PIT,Food Service/Nutrition,B+
+2024,PIT,Food / Dining Area,B-
+2025,PIT,Food / Dining Area,B-
+2023,SEA,Weight Room,A-
+2024,SEA,Weight Room,B
+2025,SEA,Weight Room,B
+2023,SEA,Treatment of Families,B+
+2024,SEA,Treatment of Families,C
+2025,SEA,Treatment of Families,A-
+2023,SEA,Training Staff,B+
+2024,SEA,Training Staff,C+
+2025,SEA,Training Staff,B-
+2023,SEA,Training Room,B-
+2024,SEA,Training Room,C
+2025,SEA,Training Room,C
+2023,SEA,Team Travel,C
+2024,SEA,Team Travel,C
+2025,SEA,Team Travel,A-
+2023,SEA,Strength Coaches,A-
+2024,SEA,Strength Coaches,A-
+2025,SEA,Strength Coaches,A-
+2024,SEA,Ownership,C+
+2025,SEA,Ownership,C+
+2024,SEA,Nutritionist / Dietician,B+
+2025,SEA,Nutritionist / Dietician,B
+2023,SEA,Locker Room,A-
+2024,SEA,Locker Room,B
+2025,SEA,Locker Room,B+
+2024,SEA,Head Coach,A
+2025,SEA,Head Coach,A
+2023,SEA,Food Service/Nutrition,B+
+2024,SEA,Food / Dining Area,B
+2025,SEA,Food / Dining Area,B
+2023,SF,Weight Room,A-
+2024,SF,Weight Room,B+
+2025,SF,Weight Room,A-
+2023,SF,Treatment of Families,B+
+2024,SF,Treatment of Families,A-
+2025,SF,Treatment of Families,B+
+2023,SF,Training Staff,A-
+2024,SF,Training Staff,B-
+2025,SF,Training Staff,B-
+2023,SF,Training Room,C+
+2024,SF,Training Room,C
+2025,SF,Training Room,B-
+2023,SF,Team Travel,A-
+2024,SF,Team Travel,C+
+2025,SF,Team Travel,A-
+2023,SF,Strength Coaches,A
+2024,SF,Strength Coaches,B+
+2025,SF,Strength Coaches,A
+2024,SF,Ownership,A-
+2025,SF,Ownership,A-
+2024,SF,Nutritionist / Dietician,B+
+2025,SF,Nutritionist / Dietician,B+
+2023,SF,Locker Room,B+
+2024,SF,Locker Room,B+
+2025,SF,Locker Room,B
+2024,SF,Head Coach,A
+2025,SF,Head Coach,A
+2023,SF,Food Service/Nutrition,A-
+2024,SF,Food / Dining Area,A-
+2025,SF,Food / Dining Area,A
+2023,TB,Weight Room,B+
+2024,TB,Weight Room,B
+2025,TB,Weight Room,B
+2023,TB,Treatment of Families,D+
+2024,TB,Treatment of Families,F
+2025,TB,Treatment of Families,C-
+2023,TB,Training Staff,A-
+2024,TB,Training Staff,B
+2025,TB,Training Staff,B
+2023,TB,Training Room,C+
+2024,TB,Training Room,B-
+2025,TB,Training Room,C+
+2023,TB,Team Travel,F
+2024,TB,Team Travel,F
+2025,TB,Team Travel,C-
+2023,TB,Strength Coaches,A
+2024,TB,Strength Coaches,A-
+2025,TB,Strength Coaches,A
+2024,TB,Ownership,D-
+2025,TB,Ownership,D+
+2024,TB,Nutritionist / Dietician,B
+2025,TB,Nutritionist / Dietician,B+
+2023,TB,Locker Room,C-
+2024,TB,Locker Room,C-
+2025,TB,Locker Room,C
+2024,TB,Head Coach,B-
+2025,TB,Head Coach,B+
+2023,TB,Food Service/Nutrition,D
+2024,TB,Food / Dining Area,C-
+2025,TB,Food / Dining Area,C-
+2023,TEN,Weight Room,B
+2024,TEN,Weight Room,B+
+2025,TEN,Weight Room,B
+2023,TEN,Treatment of Families,B-
+2024,TEN,Treatment of Families,D+
+2025,TEN,Treatment of Families,B+
+2023,TEN,Training Staff,A-
+2024,TEN,Training Staff,B
+2025,TEN,Training Staff,B
+2023,TEN,Training Room,B-
+2024,TEN,Training Room,C+
+2025,TEN,Training Room,B-
+2023,TEN,Team Travel,F
+2024,TEN,Team Travel,F
+2025,TEN,Team Travel,B
+2023,TEN,Strength Coaches,A-
+2024,TEN,Strength Coaches,B+
+2025,TEN,Strength Coaches,B+
+2024,TEN,Ownership,B+
+2025,TEN,Ownership,B
+2024,TEN,Nutritionist / Dietician,B
+2025,TEN,Nutritionist / Dietician,B+
+2023,TEN,Locker Room,C
+2024,TEN,Locker Room,C+
+2025,TEN,Locker Room,C-
+2024,TEN,Head Coach,B+
+2025,TEN,Head Coach,A-
+2023,TEN,Food Service/Nutrition,B-
+2024,TEN,Food / Dining Area,B
+2025,TEN,Food / Dining Area,B+
+2023,WAS,Weight Room,C+
+2024,WAS,Weight Room,C
+2025,WAS,Weight Room,B-
+2023,WAS,Treatment of Families,F
+2024,WAS,Treatment of Families,F-
+2025,WAS,Treatment of Families,B+
+2023,WAS,Training Staff,D
+2024,WAS,Training Staff,F
+2025,WAS,Training Staff,B+
+2023,WAS,Training Room,F-
+2024,WAS,Training Room,F-
+2025,WAS,Training Room,C+
+2023,WAS,Team Travel,F-
+2024,WAS,Team Travel,F
+2025,WAS,Team Travel,A
+2023,WAS,Strength Coaches,A+
+2024,WAS,Strength Coaches,A
+2025,WAS,Strength Coaches,A
+2024,WAS,Ownership,B
+2025,WAS,Ownership,A
+2024,WAS,Nutritionist / Dietician,B-
+2025,WAS,Nutritionist / Dietician,C+
+2023,WAS,Locker Room,F-
+2024,WAS,Locker Room,F-
+2025,WAS,Locker Room,F
+2024,WAS,Head Coach,C
+2025,WAS,Head Coach,A+
+2023,WAS,Food Service/Nutrition,D+
+2024,WAS,Food / Dining Area,D+
+2025,WAS,Food / Dining Area,B+
